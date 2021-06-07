@@ -13,10 +13,9 @@ https://confluence.slac.stanford.edu/display/PCDS/TwinCAT+3+Git+Setup+and+Best+P
 
 ## Axes of Motion:
 
-
-## 4 x [Horizontal Gap
-##    Horizontal Offset
-##   Vertical Gap
-##    Vertical Offset]
+4 x (Horizontal Gap,
+    Horizontal Offset,
+    Vertical Gap,
+    Vertical Offset)
     
-# 16 total axes.
+ 16 total axes.
