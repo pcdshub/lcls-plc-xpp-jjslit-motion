@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="Main" Id="{90ca38b8-fcf5-47a7-9a91-8e230c16c364}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Main
+VAR
+	// Motors
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[VonHamos_EL1084_E2]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[VonHamos_EL1084_E2]^Channel 2^Input;
+							  .bHome				:=TIIB[VonHamos_EL1084_E2]^Channel 3^Input;
+							  .bBrakeRelease		:=TIIB[VonHamos_EL2004_E7]^Channel 1^Output'}
+	{attribute 'pytmc' := '
+		pv: HXX:VON_HAMOS:MMS:01
+	'}
+	M1 : DUT_MotionStage := (bPowerSelf:=True); // Y axis
+
+	fbMotionStageM1 : FB_MotionStage;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Hardware Enable
+M1.bHardwareEnable := TRUE;
+fbMotionStageM1(stMotionStage:=M1);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
