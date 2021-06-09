@@ -898,7 +898,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{DC420A94-2600-4AB9-AAFC-4E99B11FC5E1}" Name="hxr_jjslit_motion" PrjFilePath="..\..\hxr_jjslit_motion\hxr_jjslit_motion.plcproj" TmcFilePath="..\..\hxr_jjslit_motion\hxr_jjslit_motion.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="hxr_jjslit_motion\hxr_jjslit_motion.tmc">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="1" TmcPath="hxr_jjslit_motion\hxr_jjslit_motion.tmc">
 			<Name>hxr_jjslit_motion Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1110,7 +1110,7 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^VonHamos_EK1200_E0^VonHamos_EL2004_E7">
 				<Link VarA="PlcTask Outputs^Main.M1.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^VonHamosY">
+			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^JJ_1_V_Gap">
 				<Link VarA="PlcTask Inputs^Main.M1.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
 				<Link VarA="PlcTask Outputs^Main.M1.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
 			</OwnerB>

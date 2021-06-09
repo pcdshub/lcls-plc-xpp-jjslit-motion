@@ -4,22 +4,213 @@
     <Declaration><![CDATA[PROGRAM Main
 VAR
 	// Motors
-	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[VonHamos_EL1084_E2]^Channel 1^Input;
-                              .bLimitBackwardEnable	:=TIIB[VonHamos_EL1084_E2]^Channel 2^Input;
-							  .bHome				:=TIIB[VonHamos_EL1084_E2]^Channel 3^Input;
-							  .bBrakeRelease		:=TIIB[VonHamos_EL2004_E7]^Channel 1^Output'}
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_1_V_Gap_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_1_V_Gap_EL7037]^Channel 2^Input;
 	{attribute 'pytmc' := '
-		pv: HXX:VON_HAMOS:MMS:01
+		pv: XPP:JJAT:MMS:01
 	'}
-	M1 : DUT_MotionStage := (bPowerSelf:=True); // Y axis
+	M1 : DUT_MotionStage := (bPowerSelf:=True); // JJ_1_Vertical_Gap
 
 	fbMotionStageM1 : FB_MotionStage;
+	
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_1_V_Offset_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_1_V_Offset_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:02
+	'}
+	M2 : DUT_MotionStage := (bPowerSelf:=True); // JJ_1_Vertical_Offset
+
+	fbMotionStageM2 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_1_H_Gap_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_1_H_Gap_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:03
+	'}
+	M3 : DUT_MotionStage := (bPowerSelf:=True); // JJ_1_Horizontal_Gap
+
+	fbMotionStageM3 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_1_H_Offset_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_1_H_Offset_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:04
+	'}
+	M4 : DUT_MotionStage := (bPowerSelf:=True); // JJ_1_Horizontal_Offset
+
+	fbMotionStageM4 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_2_V_Gap_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_2_V_Gap_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:05
+	'}
+	M5 : DUT_MotionStage := (bPowerSelf:=True); // JJ_2_Vertical_Gap
+
+	fbMotionStageM5 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_2_V_Offset_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_2_V_Offset_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:06
+	'}
+	M6 : DUT_MotionStage := (bPowerSelf:=True); // JJ_2_Vertical_Offset
+
+	fbMotionStageM6 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_2_H_Gap_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_2_H_Gap_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:07
+	'}
+	M7 : DUT_MotionStage := (bPowerSelf:=True); // JJ_2_Horizontal_Gap
+
+	fbMotionStageM7 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_2_H_Offset_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_2_V_Offset_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:08
+	'}
+	M8 : DUT_MotionStage := (bPowerSelf:=True); // JJ_2_Horizontal_Offset
+
+	fbMotionStageM8 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_3_V_Gap_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_3_V_Gap_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:09
+	'}
+	M9 : DUT_MotionStage := (bPowerSelf:=True); // JJ_3_Vertical_Gap
+
+	fbMotionStageM9 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_3_V_Offset_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_3_V_Offset_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:10
+	'}
+	M10 : DUT_MotionStage := (bPowerSelf:=True); // JJ_3_Vertical_Offset
+
+	fbMotionStageM10 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_3_H_Gap_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_3_H_Gap_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:11
+	'}
+	M11 : DUT_MotionStage := (bPowerSelf:=True); // JJ_3_Horizontal_Gap
+
+	fbMotionStageM11 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_3_H_Offset_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_3_H_Offset_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:12
+	'}
+	M12 : DUT_MotionStage := (bPowerSelf:=True); // JJ_3_Horizontal_Offset
+
+	fbMotionStageM12 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_4_V_Gap_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_4_V_Gap_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:13
+	'}
+	M13 : DUT_MotionStage := (bPowerSelf:=True); // JJ_4_Vertical_Gap
+
+	fbMotionStageM13 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_4_V_Offset_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_4_V_Offset_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:14
+	'}
+	M14 : DUT_MotionStage := (bPowerSelf:=True); // JJ_4_Vertical_Offset
+
+	fbMotionStageM14 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_4_H_Gap_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_4_H_Gap_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:15
+	'}
+	M15 : DUT_MotionStage := (bPowerSelf:=True); // JJ_4_Horizontal_Gap
+
+	fbMotionStageM15 : FB_MotionStage;
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_4_H_Offset_EL7037]^Channel 1^Input;
+                              .bLimitBackwardEnable	:=TIIB[JJ_4_H_Offset_EL7037]^Channel 2^Input;
+	{attribute 'pytmc' := '
+		pv: XPP:JJAT:MMS:16
+	'}
+	M16 : DUT_MotionStage := (bPowerSelf:=True); // JJ_4_Horizontal_Offset
+
+	fbMotionStageM16 : FB_MotionStage;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[// Hardware Enable
 M1.bHardwareEnable := TRUE;
-fbMotionStageM1(stMotionStage:=M1);]]></ST>
+fbMotionStageM1(stMotionStage:=M1);
+
+M2.bHardwareEnable := TRUE;
+fbMotionStageM2(stMotionStage:=M2);
+
+M3.bHardwareEnable := TRUE;
+fbMotionStageM1(stMotionStage:=M3);
+
+M4.bHardwareEnable := TRUE;
+fbMotionStageM1(stMotionStage:=M4);
+
+M5.bHardwareEnable := TRUE;
+fbMotionStageM5(stMotionStage:=M5);
+
+M6.bHardwareEnable := TRUE;
+fbMotionStageM6(stMotionStage:=M6);
+
+M3.bHardwareEnable := TRUE;
+fbMotionStageM1(stMotionStage:=M3);
+
+M7.bHardwareEnable := TRUE;
+fbMotionStageM7(stMotionStage:=M7);
+
+M8.bHardwareEnable := TRUE;
+fbMotionStageM8(stMotionStage:=M8);
+
+M9.bHardwareEnable := TRUE;
+fbMotionStageM9(stMotionStage:=M9);
+
+M10.bHardwareEnable := TRUE;
+fbMotionStageM10(stMotionStage:=M10);
+
+M11.bHardwareEnable := TRUE;
+fbMotionStageM11(stMotionStage:=M11);
+
+M12.bHardwareEnable := TRUE;
+fbMotionStageM12(stMotionStage:=M12);
+
+M13.bHardwareEnable := TRUE;
+fbMotionStageM13(stMotionStage:=M13);
+
+M14.bHardwareEnable := TRUE;
+fbMotionStageM14(stMotionStage:=M14);
+
+M15.bHardwareEnable := TRUE;
+fbMotionStageM15(stMotionStage:=M15);
+
+M1.bHardwareEnable := TRUE;
+fbMotionStageM1(stMotionStage:=M1);
+
+M2.bHardwareEnable := TRUE;
+fbMotionStageM2(stMotionStage:=M2);
+
+M3.bHardwareEnable := TRUE;
+fbMotionStageM1(stMotionStage:=M3);
+
+M16.bHardwareEnable := TRUE;
+fbMotionStageM1(stMotionStage:=M16);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
