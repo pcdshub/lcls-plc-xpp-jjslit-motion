@@ -9,17 +9,20 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:01
 	'}
-	M1 : DUT_MotionStage := (bPowerSelf:=True); // JJ_1_Vertical_Gap
+	M1 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_1_Vertical_Gap
 
 	fbMotionStageM1 : FB_MotionStage;
 	
+
 	
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_1_V_Offset_EL7037]^Channel 1^Input;
                               .bLimitBackwardEnable	:=TIIB[JJ_1_V_Offset_EL7037]^Channel 2^Input;
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:02
 	'}
-	M2 : DUT_MotionStage := (bPowerSelf:=True); // JJ_1_Vertical_Offset
+	M2 : DUT_MotionStage := (bPowerSelf:=True,
+    nHomingMode := ABSOLUTE_SET); // JJ_1_Vertical_Offset
 
 	fbMotionStageM2 : FB_MotionStage;
 	
@@ -28,7 +31,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:03
 	'}
-	M3 : DUT_MotionStage := (bPowerSelf:=True); // JJ_1_Horizontal_Gap
+	M3 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_1_Horizontal_Gap
 
 	fbMotionStageM3 : FB_MotionStage;
 	
@@ -37,7 +41,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:04
 	'}
-	M4 : DUT_MotionStage := (bPowerSelf:=True); // JJ_1_Horizontal_Offset
+	M4 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_1_Horizontal_Offset
 
 	fbMotionStageM4 : FB_MotionStage;
 	
@@ -46,7 +51,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:05
 	'}
-	M5 : DUT_MotionStage := (bPowerSelf:=True); // JJ_2_Vertical_Gap
+	M5 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_2_Vertical_Gap
 
 	fbMotionStageM5 : FB_MotionStage;
 	
@@ -55,7 +61,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:06
 	'}
-	M6 : DUT_MotionStage := (bPowerSelf:=True); // JJ_2_Vertical_Offset
+	M6 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_2_Vertical_Offset
 
 	fbMotionStageM6 : FB_MotionStage;
 	
@@ -64,7 +71,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:07
 	'}
-	M7 : DUT_MotionStage := (bPowerSelf:=True); // JJ_2_Horizontal_Gap
+	M7 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_2_Horizontal_Gap
 
 	fbMotionStageM7 : FB_MotionStage;
 	
@@ -73,7 +81,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:08
 	'}
-	M8 : DUT_MotionStage := (bPowerSelf:=True); // JJ_2_Horizontal_Offset
+	M8 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_2_Horizontal_Offset
 
 	fbMotionStageM8 : FB_MotionStage;
 	
@@ -82,7 +91,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:09
 	'}
-	M9 : DUT_MotionStage := (bPowerSelf:=True); // JJ_3_Vertical_Gap
+	M9 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_3_Vertical_Gap
 
 	fbMotionStageM9 : FB_MotionStage;
 	
@@ -91,7 +101,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:10
 	'}
-	M10 : DUT_MotionStage := (bPowerSelf:=True); // JJ_3_Vertical_Offset
+	M10 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_3_Vertical_Offset
 
 	fbMotionStageM10 : FB_MotionStage;
 	
@@ -100,7 +111,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:11
 	'}
-	M11 : DUT_MotionStage := (bPowerSelf:=True); // JJ_3_Horizontal_Gap
+	M11 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_3_Horizontal_Gap
 
 	fbMotionStageM11 : FB_MotionStage;
 	
@@ -109,7 +121,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:12
 	'}
-	M12 : DUT_MotionStage := (bPowerSelf:=True); // JJ_3_Horizontal_Offset
+	M12 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_3_Horizontal_Offset
 
 	fbMotionStageM12 : FB_MotionStage;
 	
@@ -118,7 +131,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:13
 	'}
-	M13 : DUT_MotionStage := (bPowerSelf:=True); // JJ_4_Vertical_Gap
+	M13 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_4_Vertical_Gap
 
 	fbMotionStageM13 : FB_MotionStage;
 	
@@ -127,7 +141,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:14
 	'}
-	M14 : DUT_MotionStage := (bPowerSelf:=True); // JJ_4_Vertical_Offset
+	M14 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_4_Vertical_Offset
 
 	fbMotionStageM14 : FB_MotionStage;
 	
@@ -136,7 +151,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:15
 	'}
-	M15 : DUT_MotionStage := (bPowerSelf:=True); // JJ_4_Horizontal_Gap
+	M15 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_4_Horizontal_Gap
 
 	fbMotionStageM15 : FB_MotionStage;
 	
@@ -145,7 +161,8 @@ VAR
 	{attribute 'pytmc' := '
 		pv: XPP:JJAT:MMS:16
 	'}
-	M16 : DUT_MotionStage := (bPowerSelf:=True); // JJ_4_Horizontal_Offset
+	M16 : DUT_MotionStage := (bPowerSelf:=True,
+	nHomingMode := ABSOLUTE_SET); // JJ_4_Horizontal_Offset
 
 	fbMotionStageM16 : FB_MotionStage;
 END_VAR
@@ -200,17 +217,8 @@ fbMotionStageM14(stMotionStage:=M14);
 M15.bHardwareEnable := TRUE;
 fbMotionStageM15(stMotionStage:=M15);
 
-M1.bHardwareEnable := TRUE;
-fbMotionStageM1(stMotionStage:=M1);
-
-M2.bHardwareEnable := TRUE;
-fbMotionStageM2(stMotionStage:=M2);
-
-M3.bHardwareEnable := TRUE;
-fbMotionStageM1(stMotionStage:=M3);
-
 M16.bHardwareEnable := TRUE;
-fbMotionStageM1(stMotionStage:=M16);]]></ST>
+fbMotionStageM16(stMotionStage:=M16);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
