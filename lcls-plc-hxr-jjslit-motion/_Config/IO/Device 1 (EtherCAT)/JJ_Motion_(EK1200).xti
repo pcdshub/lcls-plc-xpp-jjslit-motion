@@ -7,61 +7,61 @@
 		<Name>__FILENAME__</Name>
 		<ImageId>1000</ImageId>
 		<EtherCAT PdiType="#x0100" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04b02c52" RevisionNo="#x00001388" InfoDataState="false" PortPhys="49" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1200-5000 EtherCAT Power supply (2A E-Bus)" Desc="EK1200"/>
-		<Box File="Term 8 (EL7037).xti" Id="8">
+		<Box File="JJ_1_V_Gap_EL7037.xti" Id="8">
 			<EtherCAT PortABoxInfo="#x01000003"/>
 		</Box>
-		<Box File="Term 9 (EL7037).xti" Id="9">
+		<Box File="JJ_1_V_Offset_EL7037.xti" Id="9">
 			<EtherCAT PortABoxInfo="#x01000008"/>
 		</Box>
-		<Box File="Term 11 (EL7037).xti" Id="11">
+		<Box File="JJ_1_H_Gap_EL7037.xti" Id="11">
 			<EtherCAT PortABoxInfo="#x01000009"/>
 		</Box>
-		<Box File="Term 12 (EL7037).xti" Id="12">
+		<Box File="JJ_1_H_Offset_EL7037.xti" Id="12">
 			<EtherCAT PortABoxInfo="#x0100000b"/>
 		</Box>
-		<Box File="Term 13 (EL7037).xti" Id="13">
+		<Box File="JJ_2_V_Gap_EL7037.xti" Id="13">
 			<EtherCAT PortABoxInfo="#x0100000c"/>
 		</Box>
-		<Box File="Term 14 (EL7037).xti" Id="14">
+		<Box File="JJ_2_V_Offset_EL7037.xti" Id="14">
 			<EtherCAT PortABoxInfo="#x0100000d"/>
 		</Box>
-		<Box File="Term 15 (EL7037).xti" Id="15">
+		<Box File="JJ_2_H_Gap_EL7037.xti" Id="15">
 			<EtherCAT PortABoxInfo="#x0100000e"/>
 		</Box>
-		<Box File="Term 18 (EL7037).xti" Id="18">
+		<Box File="JJ_2_H_Offset_EL7037.xti" Id="18">
 			<EtherCAT PortABoxInfo="#x0100000f"/>
 		</Box>
-		<Box File="Term 19 (EL9410).xti" Id="19">
+		<Box File="E_Bus_Refresh_EL9410.xti" Id="19">
 			<EtherCAT PortABoxInfo="#x01000012"/>
 		</Box>
-		<Box File="Term 20 (EL7037).xti" Id="20">
+		<Box File="JJ_3_V_Gap_EL7037.xti" Id="20">
 			<EtherCAT PortABoxInfo="#x01000013"/>
 		</Box>
-		<Box File="Term 21 (EL7037).xti" Id="21">
+		<Box File="JJ_3_V_Offset_EL7037.xti" Id="21">
 			<EtherCAT PortABoxInfo="#x01000014"/>
 		</Box>
-		<Box File="Term 22 (EL7037).xti" Id="22">
+		<Box File="JJ_3_H_Gap_EL7037.xti" Id="22">
 			<EtherCAT PortABoxInfo="#x01000015"/>
 		</Box>
-		<Box File="Term 23 (EL7037).xti" Id="23">
+		<Box File="JJ_3_H_Offset_EL7037.xti" Id="23">
 			<EtherCAT PortABoxInfo="#x01000016"/>
 		</Box>
-		<Box File="Term 24 (EL7037).xti" Id="24">
+		<Box File="JJ_4_V_Gap_EL7037.xti" Id="24">
 			<EtherCAT PortABoxInfo="#x01000017"/>
 		</Box>
-		<Box File="Term 25 (EL7037).xti" Id="25">
+		<Box File="JJ_4_V_Offset_EL7037.xti" Id="25">
 			<EtherCAT PortABoxInfo="#x01000018"/>
 		</Box>
-		<Box File="Term 26 (EL7037).xti" Id="26">
+		<Box File="JJ_4_H_Gap_EL7037.xti" Id="26">
 			<EtherCAT PortABoxInfo="#x01000019"/>
 		</Box>
-		<Box File="Term 27 (EL7037).xti" Id="27">
+		<Box File="JJ_4_H_Offset_EL7037.xti" Id="27">
 			<EtherCAT PortABoxInfo="#x0100001a"/>
 		</Box>
-		<Box File="Term 28 (EL6070).xti" Id="28">
+		<Box File="License_Key_EL6070.xti" Id="28">
 			<EtherCAT PortABoxInfo="#x0100001b"/>
 		</Box>
-		<Box File="Term 29 (EL9011).xti" Id="29">
+		<Box File="Bus_End_Cover_EL9011.xti" Id="29">
 			<EtherCAT PortABoxInfo="#x0100001c"/>
 		</Box>
 	</Box>
