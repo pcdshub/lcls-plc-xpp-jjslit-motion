@@ -1102,14 +1102,6 @@ External Setpoint Generation:
 	</Project>
 	<Mappings>
 		<OwnerA Name="hxr_jjslit_motion Instance">
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^VonHamos_EK1200_E0^VonHamos_EL1084_E2">
-				<Link VarA="PlcTask Inputs^Main.M1.bHome" VarB="Channel 3^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="Channel 1^Input" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^VonHamos_EK1200_E0^VonHamos_EL2004_E7">
-				<Link VarA="PlcTask Outputs^Main.M1.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true"/>
-			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^JJ_1_V_Gap">
 				<Link VarA="PlcTask Inputs^Main.M1.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
 				<Link VarA="PlcTask Outputs^Main.M1.Axis.PlcToNc" VarB="Inputs^FromPlc"/>
