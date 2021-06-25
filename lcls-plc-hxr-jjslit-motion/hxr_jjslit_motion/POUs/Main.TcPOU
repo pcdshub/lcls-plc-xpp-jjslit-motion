@@ -10,6 +10,8 @@ VAR
 		pv: XPP:JAWS_1:VGAP
 	'}
 	M1 : DUT_MotionStage := (bPowerSelf:=True,
+    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // JJ_1_Vertical_Gap
 
 	fbMotionStageM1 : FB_MotionStage;

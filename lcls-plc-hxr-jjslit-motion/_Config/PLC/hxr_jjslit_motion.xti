@@ -3543,10 +3543,10 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_1_V_Gap_EL7037">
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2"/>
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1"/>
+				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_1_V_Offset_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="InfoData^Chn1"/>
-				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="InfoData^Chn0"/>
+				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_2_H_Gap_EL7037">
 				<Link VarA="PlcTask Inputs^Main.M7.bLimitBackwardEnable" VarB="InfoData^Chn1"/>
