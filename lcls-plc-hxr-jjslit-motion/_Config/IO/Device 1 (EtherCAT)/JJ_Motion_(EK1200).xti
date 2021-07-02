@@ -13,14 +13,14 @@
 		<Box File="JJ_1_V_Offset_EL7037.xti" Id="9">
 			<EtherCAT PortABoxInfo="#x01000008"/>
 		</Box>
-		<Box File="JJ_1_H_Gap_EL7037.xti" Id="11">
+		<Box File="JJ_1_H_Gap_EL7037.xti" Id="4">
 			<EtherCAT PortABoxInfo="#x01000009"/>
 		</Box>
-		<Box File="JJ_1_H_Offset_EL7037.xti" Id="12">
-			<EtherCAT PortABoxInfo="#x0100000b"/>
+		<Box File="JJ_1_H_Offset_EL7031_.xti" Id="1">
+			<EtherCAT PortABoxInfo="#x01000004"/>
 		</Box>
 		<Box File="JJ_2_V_Gap_EL7037.xti" Id="13">
-			<EtherCAT PortABoxInfo="#x0100000c"/>
+			<EtherCAT PortABoxInfo="#x01000001"/>
 		</Box>
 		<Box File="JJ_2_V_Offset_EL7037.xti" Id="14">
 			<EtherCAT PortABoxInfo="#x0100000d"/>
