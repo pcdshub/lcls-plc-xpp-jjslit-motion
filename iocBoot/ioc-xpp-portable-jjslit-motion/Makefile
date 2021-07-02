@@ -10,7 +10,7 @@ PROJECT_PATH := ../../lcls-plc-xpp-jjslit-motion/lcls-plc-xpp-jjslit-motion.tspr
 PLC = xpp_jjslit_motion
 
 PYTMC_OPTS :=
-PREFIX = PLC:XPP:JJSLIT:MOTION
+PREFIX = XPP
 
 include $(IOC_TOP)/iocBoot/templates/Makefile.base
 
