@@ -5,12 +5,12 @@ IOC_INSTANCE_PATH := $(shell pwd)
 # Set PRODUCTION_IOC to 1 to move from a testing to a production IOC:
 PRODUCTION_IOC := 0
 
-PROJECT_NAME = plc-mrco-motion
-PROJECT_PATH := ../../lcls-plc-mrco-motion/lcls-plc-mrco-motion.tsproj
-PLC = mrco_motion
+PROJECT_NAME = plc-xpp-jjslit-motion
+PROJECT_PATH := ../../lcls-plc-xpp-jjslit-motion/lcls-plc-xpp-jjslit-motion.tsproj
+PLC = xpp_jjslit_motion
 
 PYTMC_OPTS :=
-PREFIX = PLC:MRCO:MOTION
+PREFIX = PLC:XPP:JJSLIT:MOTION
 
 include $(IOC_TOP)/iocBoot/templates/Makefile.base
 
