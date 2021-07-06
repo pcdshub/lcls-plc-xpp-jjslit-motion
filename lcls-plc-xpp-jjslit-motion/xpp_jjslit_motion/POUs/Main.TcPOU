@@ -45,7 +45,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_1_H_Offset_EL7031]^STM^Status^Digital Input 1;
                               .bLimitBackwardEnable	:=TIIB[JJ_1_H_Offset_EL7031]^STM^Status^Digital Input 2'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_1:HOFF
+		pv: XPP:JAWS_1:MMS:HOFF
 	'}
 	M4 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
