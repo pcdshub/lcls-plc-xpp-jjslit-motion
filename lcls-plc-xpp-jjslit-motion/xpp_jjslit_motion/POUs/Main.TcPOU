@@ -92,7 +92,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_2_H_Offset_EL7037]^STM^Status^Digital Input 1;
                               .bLimitBackwardEnable	:=TIIB[JJ_2_H_Offset_EL7037]^STM^Status^Digital Input 2'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_2:MMS:HGAP
+		pv: XPP:JAWS_2:MMS:HOFF
 	'}
 	M8 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
