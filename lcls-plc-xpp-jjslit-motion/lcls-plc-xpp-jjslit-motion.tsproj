@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.30">
-	<Project ProjectGUID="{1E062E7D-D7B5-42FE-B6FC-7666AAD17407}" TargetNetId="172.21.148.55.1.1" ShowHideConfigurations="#x306">
+	<Project ProjectGUID="{1E062E7D-D7B5-42FE-B6FC-7666AAD17407}" TargetNetId="172.21.148.55.1.1" RelativeTargetNetId="true" RelativeIpAddresses="true" ShowHideConfigurations="#x306">
 		<System>
 			<Licenses>
 				<Target>
@@ -20,7 +20,7 @@
 			<Project File="xpp_jjslit_motion.xti"/>
 		</Plc>
 		<Io>
-			<Device DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="5.63.55.4.2.1" RemoteName="Device 1 (EtherCAT)" Id="1">
+			<Device DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="0.0.0.0.2.1" RemoteName="Device 1 (EtherCAT)" Id="1">
 				<Name>Device 1 (EtherCAT)</Name>
 				<AddressInfo>
 					<Ccat>
