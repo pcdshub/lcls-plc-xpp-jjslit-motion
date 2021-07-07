@@ -1558,7 +1558,7 @@ External Setpoint Generation:
 	</Axis>
 	<Mappings>
 		<OwnerA>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_1_H_Offset_EL7031_">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_1_H_Offset_EL7031">
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Error" Size="1" OffsA="3"/>
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Moving negative" Size="1" OffsA="5"/>
 				<Link VarA="Drive^Inputs^In^nState1" VarB="STM Status^Status^Moving positive" Size="1" OffsA="4"/>
