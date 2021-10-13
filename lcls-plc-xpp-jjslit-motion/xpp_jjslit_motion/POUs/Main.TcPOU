@@ -7,7 +7,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_1_V_Gap_EL7037]^STM^Status^Digital Input 2;
                               .bLimitBackwardEnable	:=TIIB[JJ_1_V_Gap_EL7037]^STM^Status^Digital Input 1'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_1:MMS:VGAP
+		pv: XPP:JAWS:VGAP:01
 	'}
 	M1 : DUT_MotionStage := (bPowerSelf:=True,
     nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -21,7 +21,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_1_V_Offset_EL7037]^STM^Status^Digital Input 1;
                               .bLimitBackwardEnable	:=TIIB[JJ_1_V_Offset_EL7037]^STM^Status^Digital Input 2'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_1:MMS:VOFF
+		pv: XPP:JAWS:VOFF:01
 	'}
 	M2 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -33,7 +33,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_1_H_Gap_EL7037]^STM^Status^Digital Input 2;
                               .bLimitBackwardEnable	:=TIIB[JJ_1_H_Gap_EL7037]^STM^Status^Digital Input 1'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_1:MMS:HGAP
+		pv: XPP:JAWS:HGAP:01
 	'}
 	M3 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -45,7 +45,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_1_H_Offset_EL7031]^STM^Status^Digital Input 1;
                               .bLimitBackwardEnable	:=TIIB[JJ_1_H_Offset_EL7031]^STM^Status^Digital Input 2'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_1:MMS:HOFF
+		pv: XPP:JAWS:HOFF:01
 	'}
 	M4 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -57,7 +57,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_2_V_Gap_EL7037]^STM^Status^Digital Input 2;
                               .bLimitBackwardEnable	:=TIIB[JJ_2_V_Gap_EL7037]^STM^Status^Digital Input 1'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_2:MMS:VGAP
+		pv: XPP:JAWS:VGAP:02
 	'}
 	M5 : DUT_MotionStage := (bPowerSelf:=True,
  	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -69,7 +69,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_2_V_Offset_EL7037]^STM^Status^Digital Input 1;
                               .bLimitBackwardEnable	:=TIIB[JJ_2_V_Offset_EL7037]^STM^Status^Digital Input 2'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_2:MMS:VOFF
+		pv: XPP:JAWS:VOFF:02
 	'}
 	M6 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -80,7 +80,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_2_H_Gap_EL7037]^STM^Status^Digital Input 2;
                               .bLimitBackwardEnable	:=TIIB[JJ_2_H_Gap_EL7037]^STM^Status^Digital Input 1'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_2:MMS:HGAP
+		pv: XPP:JAWS:HGAP:02
 	'}
 	M7 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -92,7 +92,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_2_H_Offset_EL7037]^STM^Status^Digital Input 1;
                               .bLimitBackwardEnable	:=TIIB[JJ_2_H_Offset_EL7037]^STM^Status^Digital Input 2'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_2:MMS:HOFF
+		pv: XPP:JAWS:HOFF:02
 	'}
 	M8 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -104,7 +104,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_3_V_Gap_EL7037]^STM^Status^Digital Input 2;
                               .bLimitBackwardEnable	:=TIIB[JJ_3_V_Gap_EL7037]^STM^Status^Digital Input 1'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_3:MMS:VGAP
+		pv: XPP:JAWS:VGAP:03
 	'}
 	M9 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -116,7 +116,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_3_V_Offset_EL7037]^STM^Status^Digital Input 2;
                               .bLimitBackwardEnable	:=TIIB[JJ_3_V_Offset_EL7037]^STM^Status^Digital Input 1'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_3:MMS:VOFF
+		pv: XPP:JAWS:VOFF:03
 	'}
 	M10 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -128,7 +128,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_3_H_Gap_EL7037]^STM^Status^Digital Input 2;
                               .bLimitBackwardEnable	:=TIIB[JJ_3_H_Gap_EL7037]^STM^Status^Digital Input 1'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_3:MMS:HGAP
+		pv: XPP:JAWS:HGAP:03
 	'}
 	M11 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -140,7 +140,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_3_H_Offset_EL7037]^STM^Status^Digital Input 1;
                               .bLimitBackwardEnable	:=TIIB[JJ_3_H_Offset_EL7037]^STM^Status^Digital Input 2'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_3:MMS:HOFF
+		pv: XPP:JAWS:HOFF:03
 	'}
 	M12 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -152,7 +152,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_4_V_Gap_EL7037]^STM^Status^Digital Input 2;
                               .bLimitBackwardEnable	:=TIIB[JJ_4_V_Gap_EL7037]^STM^Status^Digital Input 1'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_4:MMS:VGAP
+		pv: XPP:JAWS:VGAP:04
 	'}
 	M13 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -164,7 +164,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_4_V_Offset_EL7037]^STM^Status^Digital Input 1;
                               .bLimitBackwardEnable	:=TIIB[JJ_4_V_Offset_EL7037]^STM^Status^Digital Input 2'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_4:MMS:VOFF
+		pv: XPP:JAWS:VOFF:04
 	'}
 	M14 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -176,7 +176,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_4_H_Gap_EL7037]^STM^Status^Digital Input 2;
                               .bLimitBackwardEnable	:=TIIB[JJ_4_H_Gap_EL7037]^STM^Status^Digital Input 1'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_4:MMS:HGAP
+		pv: XPP:JAWS:HGAP:04
 	'}
 	M15 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -188,7 +188,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_4_H_Offset_EL7037]^STM^Status^Digital Input 1;
                               .bLimitBackwardEnable	:=TIIB[JJ_4_H_Offset_EL7037]^STM^Status^Digital Input 2'}
 	{attribute 'pytmc' := '
-		pv: XPP:JAWS_4:MMS:HOFF
+		pv: XPP:JAWS:HOFF:04
 	'}
 	M16 : DUT_MotionStage := (bPowerSelf:=True,
 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
