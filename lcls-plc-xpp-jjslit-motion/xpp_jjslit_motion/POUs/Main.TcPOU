@@ -7,7 +7,7 @@ VAR
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_1_V_Gap_EL7037]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable	:=TIIB[JJ_1_V_Gap_EL7037]^STM Status^Status^Digital input 1'}
 	{attribute 'pytmc' := '
-		pinputP:JJ1:JAWS:YWIDTH
+		pv: XPP:JJ1:JAWS:YWIDTH
 	'}
 	M1 : DUT_MotionStage := (bPowerSelf:=True,
     nEnableMode:=ENUM_StageEnableMode.ALWAYS,
