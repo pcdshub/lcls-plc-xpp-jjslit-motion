@@ -3533,68 +3533,68 @@ External Setpoint Generation:
 	<Mappings>
 		<OwnerA Name="xpp_jjslit_motion Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_1_H_Gap_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M3.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1"/>
-				<Link VarA="PlcTask Inputs^Main.M3.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2"/>
+				<Link VarA="PlcTask Inputs^Main.M3.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M3.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_1_H_Offset_EL7031">
-				<Link VarA="PlcTask Inputs^Main.M4.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2"/>
-				<Link VarA="PlcTask Inputs^Main.M4.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1"/>
+				<Link VarA="PlcTask Inputs^Main.M4.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M4.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_1_V_Gap_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1"/>
-				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2"/>
+				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_1_V_Offset_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2"/>
-				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1"/>
+				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_2_H_Gap_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M7.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1"/>
-				<Link VarA="PlcTask Inputs^Main.M7.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2"/>
+				<Link VarA="PlcTask Inputs^Main.M7.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M7.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_2_H_Offset_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M8.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2"/>
-				<Link VarA="PlcTask Inputs^Main.M8.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1"/>
+				<Link VarA="PlcTask Inputs^Main.M8.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M8.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_2_V_Gap_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M5.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1"/>
-				<Link VarA="PlcTask Inputs^Main.M5.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2"/>
+				<Link VarA="PlcTask Inputs^Main.M5.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M5.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_2_V_Offset_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M6.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2"/>
-				<Link VarA="PlcTask Inputs^Main.M6.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1"/>
+				<Link VarA="PlcTask Inputs^Main.M6.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M6.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_3_H_Gap_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M11.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1"/>
-				<Link VarA="PlcTask Inputs^Main.M11.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2"/>
+				<Link VarA="PlcTask Inputs^Main.M11.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M11.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_3_H_Offset_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M12.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2"/>
-				<Link VarA="PlcTask Inputs^Main.M12.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1"/>
+				<Link VarA="PlcTask Inputs^Main.M12.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M12.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_3_V_Gap_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M9.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1"/>
-				<Link VarA="PlcTask Inputs^Main.M9.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2"/>
+				<Link VarA="PlcTask Inputs^Main.M9.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M9.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_3_V_Offset_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M10.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2"/>
-				<Link VarA="PlcTask Inputs^Main.M10.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1"/>
+				<Link VarA="PlcTask Inputs^Main.M10.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M10.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_4_H_Gap_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M15.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1"/>
-				<Link VarA="PlcTask Inputs^Main.M15.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2"/>
+				<Link VarA="PlcTask Inputs^Main.M15.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M15.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_4_H_Offset_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M16.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2"/>
-				<Link VarA="PlcTask Inputs^Main.M16.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1"/>
+				<Link VarA="PlcTask Inputs^Main.M16.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M16.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_4_V_Gap_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M13.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1"/>
-				<Link VarA="PlcTask Inputs^Main.M13.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2"/>
+				<Link VarA="PlcTask Inputs^Main.M13.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M13.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^JJ_Motion_(EK1200)^JJ_4_V_Offset_EL7037">
-				<Link VarA="PlcTask Inputs^Main.M14.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2"/>
-				<Link VarA="PlcTask Inputs^Main.M14.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1"/>
+				<Link VarA="PlcTask Inputs^Main.M14.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M14.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^JJ_1_H_Gap">
 				<Link VarA="PlcTask Inputs^Main.M3.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
