@@ -207,10 +207,10 @@ M2.bHardwareEnable := TRUE;
 fbMotionStageM2(stMotionStage:=M2);
 
 M3.bHardwareEnable := TRUE;
-fbMotionStageM1(stMotionStage:=M3);
+fbMotionStageM3(stMotionStage:=M3);
 
 M4.bHardwareEnable := TRUE;
-fbMotionStageM1(stMotionStage:=M4);
+fbMotionStageM4(stMotionStage:=M4);
 
 M5.bHardwareEnable := TRUE;
 fbMotionStageM5(stMotionStage:=M5);
