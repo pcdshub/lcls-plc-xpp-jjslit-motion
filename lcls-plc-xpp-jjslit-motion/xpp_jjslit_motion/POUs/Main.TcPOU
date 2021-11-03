@@ -10,7 +10,8 @@ VAR
 		pv: XPP:JJ1:JAWS:YWIDTH
 	'}
 	M1 : DUT_MotionStage := (bPowerSelf:=True,
-    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_1_Vertical_Gap
 
@@ -24,7 +25,8 @@ VAR
 		pv: XPP:JJ1:JAWS:YCENTER
 	'}
 	M2 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
     nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_1_Vertical_Offset
 
@@ -36,7 +38,8 @@ VAR
 		pv: XPP:JJ1:JAWS:XWIDTH
 	'}
 	M3 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_1_Horizontal_Gap
 
@@ -48,7 +51,8 @@ VAR
 		pv: XPP:JJ1:JAWS:XCENTER
 	'}
 	M4 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_1_Horizontal_Offset
 
@@ -60,7 +64,8 @@ VAR
 		pv: XPP:JJ2:JAWS:YWIDTH
 	'}
 	M5 : DUT_MotionStage := (bPowerSelf:=True,
- 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+// 	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_2_Vertical_Gap
 
@@ -72,7 +77,8 @@ VAR
 		pv: XPP:JJ2:JAWS:YCENTER
 	'}
 	M6 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_2_Vertical_Offset
 	fbMotionStageM6 : FB_MotionStage;
@@ -83,7 +89,8 @@ VAR
 		pv: XPP:JJ2:JAWS:XWIDTH
 	'}
 	M7 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_2_Horizontal_Gap
 
@@ -95,7 +102,8 @@ VAR
 		pv: XPP:JJ2:JAWS:XCENTER
 	'}
 	M8 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_2_Horizontal_Offset
 
@@ -107,7 +115,8 @@ VAR
 		pv: XPP:JJ3:JAWS:YWIDTH
 	'}
 	M9 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_3_Vertical_Gap
 
@@ -119,7 +128,8 @@ VAR
 		pv: XPP:JJ3:JAWS:YCENTER
 	'}
 	M10 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_3_Vertical_Offset
 
@@ -131,7 +141,8 @@ VAR
 		pv: XPP:JJ3:JAWS:XWIDTH
 	'}
 	M11 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_3_Horizontal_Gap
 
@@ -143,7 +154,8 @@ VAR
 		pv: XPP:JJ3:JAWS:XCENTER
 	'}
 	M12 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_3_Horizontal_Offset
 
@@ -155,7 +167,8 @@ VAR
 		pv: XPP:JJ4:JAWS:YWIDTH
 	'}
 	M13 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_4_Vertical_Gap
 
@@ -167,7 +180,8 @@ VAR
 		pv: XPP:JJ4:JAWS:YCENTER
 	'}
 	M14 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_4_Vertical_Offset
 
@@ -179,7 +193,8 @@ VAR
 		pv: XPP:JJ4:JAWS:XWIDTH
 	'}
 	M15 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_4_Horizontal_Gap
 
@@ -191,7 +206,8 @@ VAR
 		pv: XPP:JJ4:JAWS:XCENTER
 	'}
 	M16 : DUT_MotionStage := (bPowerSelf:=True,
-	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+//	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
 	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_4_Horizontal_Offset
 
