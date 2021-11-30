@@ -58,7 +58,7 @@
 				<Image Id="2" AddrType="9" ImageType="3">
 					<Name>Image</Name>
 				</Image>
-				<Box File="JJ_Motion_(EK1200).xti" Id="3">
+				<Box File="JJ_PLC_EK1200.xti" Id="2">
 					<EtherCAT PortABoxInfo="#x00ffffff"/>
 				</Box>
 				<EtherCAT/>
