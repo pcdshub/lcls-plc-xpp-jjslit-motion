@@ -13,7 +13,7 @@ VAR
 //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
-	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_1_Vertical_Gap
+	nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT); // JJ_1_Vertical_Gap
 
 	fbMotionStageM1 : FB_MotionStage;
 	
@@ -41,7 +41,7 @@ VAR
 //	nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 	nBrakeMode:= ENUM_StageBrakeMode.NO_BRAKE,
-	nHomingMode := ENUM_EpicsHomeCmd.LOW_LIMIT); // JJ_1_Horizontal_Gap
+	nHomingMode := ENUM_EpicsHomeCmd.HIGH_LIMIT); // JJ_1_Horizontal_Gap
 
 	fbMotionStageM3 : FB_MotionStage;
 	
