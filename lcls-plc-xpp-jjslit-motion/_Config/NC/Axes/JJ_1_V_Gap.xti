@@ -1355,7 +1355,7 @@ External Setpoint Generation:
 			<OtherSettings AllowMotionCmdToSlave="true" PulseDistancePos="0.5" PulseDistanceNeg="0.5"/>
 		</AxisPara>
 		<Encoder Name="Enc" EncType="4">
-			<EncPara ScaleFactorNumerator="1.59e-05" MaxCount="#x0000ffff">
+			<EncPara ScaleFactorNumerator="1.59e-05" Inverse="true" MaxCount="#x0000ffff">
 				<SoftEndMaxControl Range="25"/>
 				<Inc RefSoftSyncMask="#x0000ffff"/>
 				<ParameterChanged>8</ParameterChanged>
