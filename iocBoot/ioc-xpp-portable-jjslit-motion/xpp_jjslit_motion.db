@@ -37,6 +37,8 @@ record(waveform, "$(PREFIX)LCLSGeneral:LogHost_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Logger.cLogHost?")
   field(FTVL, "CHAR")
   field(NELM, "15")
+  field(MPST, "On Change")
+  field(APST, "On Change")
   info(archive, "VAL")
 }
 
@@ -46,6 +48,8 @@ record(waveform, "$(PREFIX)LCLSGeneral:LogHost") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Logger.cLogHost=")
   field(FTVL, "CHAR")
   field(NELM, "15")
+  field(MPST, "On Change")
+  field(APST, "On Change")
   info(autosaveFields_pass0, "VAL")
   info(archive, "VAL")
 }
@@ -365,78 +369,6 @@ record(longin, "$(PREFIX)0RateBeamCnst:Cohort_RBV") {
   field(TSE, "-2")
   field(DTYP, "asynInt32")
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cst0RateBeam.nCohortInt?")
-  info(archive, "monitor 1: VAL")
-}
-
-record(ai, "$(PREFIX)SafeBeamCnst:Transmission_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.nTran?")
-  field(PREC, "2")
-  field(HOPR, "1")
-  field(LOPR, "0")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "monitor 1: VAL")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:Rate_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.nRate?")
-  field(EGU, "Hz")
-  info(archive, "monitor 1: VAL")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:PhotonEnergyRanges_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.neVRange?")
-  field(EGU, "eV")
-  info(archive, "monitor 1: VAL")
-}
-
-record(waveform, "$(PREFIX)SafeBeamCnst:Veto_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.aVetoDevices?")
-  field(FTVL, "CHAR")
-  field(NELM, "16")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(archive, "monitor 1: VAL")
-}
-
-record(bi, "$(PREFIX)SafeBeamCnst:Valid_RBV") {
-  field(DESC, "Safe beam constant")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.xValid?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "monitor 1: VAL")
-}
-
-record(longin, "$(PREFIX)SafeBeamCnst:Cohort_RBV") {
-  field(DESC, "Cohort inc on each arb cycle")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PMPS_GVL.cstSafeBeam.nCohortInt?")
   info(archive, "monitor 1: VAL")
 }
 
