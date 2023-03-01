@@ -1,0 +1,502 @@
+
+NC Settings
+-----------
+
+.. csv-table::
+    :header: Axis ID, Name
+    :align: center
+
+        1, JJ_1_V_Gap
+        2, JJ_1_V_Offset
+        3, JJ_1_H_Gap
+        4, JJ_1_H_Offset
+        5, JJ_2_V_Gap
+        6, JJ_2_V_Offset
+        7, JJ_2_H_Gap
+        8, JJ_2_H_Offset
+        9, JJ_3_V_Gap
+        10, JJ_3_V_Offset
+        11, JJ_3_H_Gap
+        12, JJ_3_H_Offset
+        13, JJ_4_V_Gap
+        14, JJ_4_V_Offset
+        15, JJ_4_H_Gap
+        16, JJ_4_H_Offset
+
+
+
+Axis 1: JJ_1_V_Gap
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 1
+    Name, JJ_1_V_Gap
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:Acceleration, 14.9254
+    Dynamic:AccelerationMaximum, 30
+    Dynamic:Deceleration, 14.9254
+    Dynamic:DecelerationMaximum, 30
+    Dynamic:DelayTime, 0.008
+    Dynamic:Jerk, 44.5534
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 1.59e-05
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 1
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0.1
+
+
+
+Axis 2: JJ_1_V_Offset
+^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 2
+    Name, JJ_1_V_Offset
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 7.94e-06
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 2
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 3: JJ_1_H_Gap
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 3
+    Name, JJ_1_H_Gap
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 1.59e-05
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 3
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 4: JJ_1_H_Offset
+^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 4
+    Name, JJ_1_H_Offset
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 7.94e-06
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 4
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 5: JJ_2_V_Gap
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 5
+    Name, JJ_2_V_Gap
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 1.59e-05
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 5
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 6: JJ_2_V_Offset
+^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 6
+    Name, JJ_2_V_Offset
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 7.94e-06
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 6
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 7: JJ_2_H_Gap
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 7
+    Name, JJ_2_H_Gap
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 1.59e-05
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 7
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 8: JJ_2_H_Offset
+^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 8
+    Name, JJ_2_H_Offset
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 7.94e-06
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 8
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 9: JJ_3_V_Gap
+^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 9
+    Name, JJ_3_V_Gap
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 1.59e-05
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 9
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 10: JJ_3_V_Offset
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 10
+    Name, JJ_3_V_Offset
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 7.94e-06
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 10
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 11: JJ_3_H_Gap
+^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 11
+    Name, JJ_3_H_Gap
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 1.59e-05
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 11
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 12: JJ_3_H_Offset
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 12
+    Name, JJ_3_H_Offset
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 7.94e-06
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 12
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 13: JJ_4_V_Gap
+^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 13
+    Name, JJ_4_V_Gap
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 1.59e-05
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 13
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 14: JJ_4_V_Offset
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 14
+    Name, JJ_4_V_Offset
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 7.94e-06
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 14
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 15: JJ_4_H_Gap
+^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 15
+    Name, JJ_4_H_Gap
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:Inverse, true
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 1.59e-05
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 15
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:Maximum, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
+
+Axis 16: JJ_4_H_Offset
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 16
+    Name, JJ_4_H_Offset
+    AxisType, 1
+    CreateSymbols, true
+    Dynamic:DelayTime, 0.008
+    Enc:EncType, 4
+    Enc:Inc:RefSoftSyncMask, #x0000ffff
+    Enc:MaxCount, #x0000ffff
+    Enc:ScaleFactorNumerator, 7.94e-06
+    Enc:SoftEndMaxControl:Range, 25
+    Id, 16
+    OtherSettings:AllowMotionCmdToSlave, true
+    OtherSettings:PulseDistanceNeg, 0.5
+    OtherSettings:PulseDistancePos, 0.5
+    Velo:FastManual, 1
+    Velo:RefSearch, 0.3
+    Velo:RefSync, 0.3
+    Velo:SlowManual, 0
+
+
