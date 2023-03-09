@@ -55,6 +55,280 @@ adsAsynPortDriverConfigure("$(ASYN_PORT)", "$(IPADDR)", "$(AMSID)", "$(AMS_PORT)
 cd "$(ADS_IOC_TOP)/db"
 
 
+epicsEnvSet("MOTOR_PORT",     "PLC_ADS")
+epicsEnvSet("PREFIX",         "XPP:")
+epicsEnvSet("NUMAXES",        "16")
+epicsEnvSet("MOVE_POLL_RATE", "200")
+epicsEnvSet("IDLE_POLL_RATE", "1000")
+
+EthercatMCCreateController("$(MOTOR_PORT)", "$(ASYN_PORT)", "$(NUMAXES)", "$(MOVE_POLL_RATE)", "$(IDLE_POLL_RATE)")
+
+#define ASYN_TRACE_ERROR     0x0001
+#define ASYN_TRACEIO_DEVICE  0x0002
+#define ASYN_TRACEIO_FILTER  0x0004
+#define ASYN_TRACEIO_DRIVER  0x0008
+#define ASYN_TRACE_FLOW      0x0010
+#define ASYN_TRACE_WARNING   0x0020
+#define ASYN_TRACE_INFO      0x0040
+asynSetTraceMask("$(ASYN_PORT)", -1, 0x41)
+
+#define ASYN_TRACEIO_NODATA 0x0000
+#define ASYN_TRACEIO_ASCII  0x0001
+#define ASYN_TRACEIO_ESCAPE 0x0002
+#define ASYN_TRACEIO_HEX    0x0004
+asynSetTraceIOMask("$(ASYN_PORT)", -1, 2)
+
+#define ASYN_TRACEINFO_TIME 0x0001
+#define ASYN_TRACEINFO_PORT 0x0002
+#define ASYN_TRACEINFO_SOURCE 0x0004
+#define ASYN_TRACEINFO_THREAD 0x0008
+asynSetTraceInfoMask("$(ASYN_PORT)", -1, 5)
+
+#define AMPLIFIER_ON_FLAG_CREATE_AXIS  1
+#define AMPLIFIER_ON_FLAG_WHEN_HOMING  2
+#define AMPLIFIER_ON_FLAG_USING_CNEN   4
+
+epicsEnvSet("AXIS_NO",         "1")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ1:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "YWIDTH")
+epicsEnvSet("DESC",            "Main.M1 / JJ_1_V_Gap")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "2")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ1:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "YCENTER")
+epicsEnvSet("DESC",            "Main.M2 / JJ_1_V_Offset")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "3")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ1:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "XWIDTH")
+epicsEnvSet("DESC",            "Main.M3 / JJ_1_H_Gap")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "4")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ1:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "XCENTER")
+epicsEnvSet("DESC",            "Main.M4 / JJ_1_H_Offset")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "5")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ2:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "YWIDTH")
+epicsEnvSet("DESC",            "Main.M5 / JJ_2_V_Gap")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "6")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ2:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "YCENTER")
+epicsEnvSet("DESC",            "Main.M6 / JJ_2_V_Offset")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "7")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ2:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "XWIDTH")
+epicsEnvSet("DESC",            "Main.M7 / JJ_2_H_Gap")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "8")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ2:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "XCENTER")
+epicsEnvSet("DESC",            "Main.M8 / JJ_2_H_Offset")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "9")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ3:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "YWIDTH")
+epicsEnvSet("DESC",            "Main.M9 / JJ_3_V_Gap")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "10")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ3:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "YCENTER")
+epicsEnvSet("DESC",            "Main.M10 / JJ_3_V_Offset")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "11")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ3:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "XWIDTH")
+epicsEnvSet("DESC",            "Main.M11 / JJ_3_H_Gap")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "12")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ3:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "XCENTER")
+epicsEnvSet("DESC",            "Main.M12 / JJ_3_H_Offset")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "13")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ4:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "YWIDTH")
+epicsEnvSet("DESC",            "Main.M13 / JJ_4_V_Gap")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "14")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ4:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "YCENTER")
+epicsEnvSet("DESC",            "Main.M14 / JJ_4_V_Offset")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "15")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ4:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "XWIDTH")
+epicsEnvSet("DESC",            "Main.M15 / JJ_4_H_Gap")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+epicsEnvSet("AXIS_NO",         "16")
+epicsEnvSet("MOTOR_PREFIX",    "XPP:USR:JJ4:JAWS:")
+epicsEnvSet("MOTOR_NAME",      "XCENTER")
+epicsEnvSet("DESC",            "Main.M16 / JJ_4_H_Offset")
+epicsEnvSet("EGU",             "mm")
+epicsEnvSet("PREC",            "3")
+epicsEnvSet("AXISCONFIG",      "")
+epicsEnvSet("ECAXISFIELDINIT", "")
+epicsEnvSet("AMPLIFIER_FLAGS", "")
+
+EthercatMCCreateAxis("$(MOTOR_PORT)", "$(AXIS_NO)", "$(AMPLIFIER_FLAGS)", "$(AXISCONFIG)")
+dbLoadRecords("EthercatMC.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC), EGU=$(EGU) $(ECAXISFIELDINIT)")
+dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), R=$(MOTOR_NAME)-, MOTOR_PORT=$(MOTOR_PORT), ASYN_PORT=$(ASYN_PORT), AXIS_NO=$(AXIS_NO), DESC=$(DESC), PREC=$(PREC) ")
+dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
+
+
 dbLoadRecords("iocSoft.db", "IOC=XPP")
 dbLoadRecords("save_restoreStatus.db", "P=XPP:")
 dbLoadRecords("caPutLog.db", "IOC=${IOC}")
