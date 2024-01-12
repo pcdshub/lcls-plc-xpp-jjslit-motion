@@ -15,7 +15,7 @@
     <LibraryReferences>{9a4e249a-e93f-4ce5-8407-c5bdc51ddb4c}</LibraryReferences>
     <CombineIds>false</CombineIds>
     <Company>SLAC</Company>
-    <Released>true</Released>
+    <Released>false</Released>
     <Title>lcls-plc-xpp-jjslit-motion</Title>
     <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
