@@ -13,6 +13,11 @@
     <Implicit_KindOfTask>{7397a279-d9fb-44f1-b120-2b472cac3c01}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{6c64d3c7-528a-441a-a577-ab8d30db722e}</Implicit_Jitter_Distribution>
     <LibraryReferences>{9a4e249a-e93f-4ce5-8407-c5bdc51ddb4c}</LibraryReferences>
+    <CombineIds>false</CombineIds>
+    <Company>SLAC</Company>
+    <Released>true</Released>
+    <Title>lcls-plc-xpp-jjslit-motion</Title>
+    <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="PlcTask.TcTTO">
