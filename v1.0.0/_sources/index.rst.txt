@@ -1,0 +1,30 @@
+lcls-plc-xpp-jjslit-motion
+--------------------------
+
+.. toctree::
+    :maxdepth: 2
+    :caption: lcls-plc-xpp-jjslit-motion
+
+    lcls-plc-xpp-jjslit-motion_pragmas
+    lcls-plc-xpp-jjslit-motion_nc
+    lcls-plc-xpp-jjslit-motion_ethercat
+    lcls-plc-xpp-jjslit-motion_boxes
+    lcls-plc-xpp-jjslit-motion_links
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: xpp_jjslit_motion
+
+    lcls-plc-xpp-jjslit-motion_xpp_jjslit_motion_summary
+    lcls-plc-xpp-jjslit-motion_xpp_jjslit_motion_epics
+    lcls-plc-xpp-jjslit-motion_xpp_jjslit_motion_source
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
