@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CDevEtherCATDef" SubType="111">
+	<Device Id="4" DevType="111" DevFlags="#x0003" AmsPort="28676" AmsNetId="172.21.84.130.5.1" RemoteName="Device 4 (EtherCAT)">
+		<Name>__FILENAME__</Name>
+		<AddressInfo>
+			<Pnp>
+				<DeviceDesc>PCI\TcI8254x2</DeviceDesc>
+				<DeviceName>PCI\TCI8254X2</DeviceName>
+				<DeviceData>000105283781</DeviceData>
+			</Pnp>
+		</AddressInfo>
+		<Image Id="4" AddrType="9" ImageType="3">
+			<Name>Image</Name>
+		</Image>
+		<Box File="JJ_PLC_EK1100.xti" Id="1">
+			<EtherCAT PortABoxInfo="#x00ffffff"/>
+		</Box>
+		<EtherCAT DeviceDesc="PCI\TcI8254x2"/>
+	</Device>
+</TcSmItem>

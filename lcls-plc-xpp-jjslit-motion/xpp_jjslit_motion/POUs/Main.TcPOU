@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
   <POU Name="Main" Id="{90ca38b8-fcf5-47a7-9a91-8e230c16c364}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM Main
+    <Declaration><![CDATA[
+PROGRAM Main
 VAR
     // Motors
     {attribute 'TcLinkTo' := '.bLimitForwardEnable	:=TIIB[JJ_1_V_Gap_EL7037]^STM Status^Status^Digital input 1;
@@ -215,7 +216,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// Hardware Enable
+      <ST><![CDATA[
+// Hardware Enable
 M1.bHardwareEnable := TRUE;
 fbMotionStageM1(stMotionStage:=M1);
 
@@ -262,7 +264,8 @@ M15.bHardwareEnable := TRUE;
 fbMotionStageM15(stMotionStage:=M15);
 
 M16.bHardwareEnable := TRUE;
-fbMotionStageM16(stMotionStage:=M16);]]></ST>
+fbMotionStageM16(stMotionStage:=M16);
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
