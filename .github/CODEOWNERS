@@ -1,0 +1,20 @@
+# default group
+* @pcdshub/motion-sme @pcdshub/xpp-members
+
+# language-specific group(s)
+## TWINCAT files
+*.tsproj @pcdshub/xpp-members @pcdshub/motion-sme @pcdshub/twincat-reviewers
+*.plcproj @pcdshub/xpp-members @pcdshub/motion-sme @pcdshub/twincat-reviewers
+*.tmc @pcdshub/xpp-members @pcdshub/motion-sme @pcdshub/twincat-reviewers
+*.tpr @pcdshub/xpp-members @pcdshub/motion-sme @pcdshub/twincat-reviewers
+*.xti @pcdshub/xpp-members @pcdshub/motion-sme @pcdshub/twincat-reviewers
+*.TcTTO @pcdshub/xpp-members @pcdshub/motion-sme @pcdshub/twincat-reviewers
+*.TcPOU @pcdshub/xpp-members @pcdshub/motion-sme @pcdshub/twincat-reviewers
+*.TcDUT @pcdshub/xpp-members @pcdshub/motion-sme @pcdshub/twincat-reviewers
+*.TcGVL @pcdshub/xpp-members @pcdshub/motion-sme @pcdshub/twincat-reviewers
+*.TcVis @pcdshub/xpp-members @pcdshub/motion-sme @pcdshub/twincat-reviewers
+*.TcVMO @pcdshub/xpp-members @pcdshub/motion-sme @pcdshub/twincat-reviewers
+*.TcGTLO @pcdshub/xpp-members @pcdshub/motion-sme @pcdshub/twincat-reviewers
+
+# github folder holds administrative files
+.github/** @pcdshub/software-admin
